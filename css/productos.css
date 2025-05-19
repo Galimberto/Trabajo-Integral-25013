@@ -1,0 +1,164 @@
+
+/* Estilo para la sección de productos usando Grid*/
+.productos h2{
+    margin: 2rem 0 1rem;
+    font-size: 3rem;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 2rem; /* separación entre tarjetas */
+    max-width: 120rem;
+    margin: auto;
+}
+
+.tarjeta {
+    background-color: #fff;
+    border-radius: .8rem;
+    padding: 1.6rem;
+    box-shadow: .5rem .2rem .6rem rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta img {
+    max-width: 70%;
+    height: auto;
+    border-radius: .4rem;
+}
+
+.descripcion {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.precio {
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 1rem 1.5rem;
+    border: none;
+    background-color: #2980b9;
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f6391;
+}
+@media (max-width: 667px) /*and (min-width: 480px)*/ {
+    .contenedor-tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    }
+
+    button {
+    width: 100%;
+    }
+    .productos h2{
+        font-size: 2rem;
+    }
+}
+/* Estilo para marcas ***********************************/
+.contenedor-marcas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 6 columnas */
+    max-width: 1200px;
+    margin: auto;
+    padding: 0;
+    background-color: #fff;
+    margin-top: 2rem;
+}
+
+.marca {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marca img {
+    width: 200px;
+    height: 111px;
+    display: block;
+}
+
+@media (max-width: 667px) {
+    .contenedor-marcas {
+      grid-template-columns: repeat(2, 1fr); /* 3 columnas en móviles */
+    }
+    .marca img{
+        width: 80%;
+    }
+  }
+/* Estilo para la sección de reseñas usando Flexbox */
+.reseñas{
+    margin-bottom: 3rem;
+}
+.reseñas h2{
+    margin: 4rem 0 1.5rem;
+    font-size: 2.8rem;
+}
+.contenedor-reseñas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.tarjeta-reseña {
+    flex: 1 1 calc(25% - 20px); /* 4 por fila menos gap */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    min-width: 250px;
+}
+
+.encabezado-reseña {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.estrellas {
+    color: gold;
+    font-size: 18px;
+}
+
+.nombre {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.cuerpo-reseña .fecha {
+    font-size: 12px;
+    color: gray;
+    
+}
+
+.cuerpo-reseña p {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+}
+@media (max-width: 667px) {
+    .tarjeta-reseña {
+      flex: 1 1 calc(50% - 20px); /* 2 por fila */
+    }
+    .contenedor-reseñas{
+        width: 96%;
+    }
+}

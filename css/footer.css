@@ -1,0 +1,74 @@
+
+/*  ------------>   Seccion Footer          ****/
+
+.footer{
+    background-color: #bda776;
+    
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap:wrap; */
+}
+.logo-f{
+    display: none;
+}
+.redes-sociales ul{
+    list-style: none;
+}
+.redes-sociales ul li{
+    display: inline-block;
+}
+.redes-sociales ul a{
+    color: inherit;
+    margin: 0 .3rem;
+}
+.redes-sociales h4{
+    margin-bottom: 1rem;
+}
+.donde-estamos h4{
+    margin: .5rem 0;
+}
+.datos-local{
+    padding: .5rem .2rem;
+}
+.datos-local p{
+    font-size: small;
+}
+
+.redes-sociales,
+.datos-local,
+.donde-estamos{
+    width: 15rem;
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación 16:9 */
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 0;
+}
+
+@media(min-width:667px){
+    
+    .logo-f{
+        display: block;
+    }
+    .redes-sociales,
+    .datos-local,
+    .donde-estamos{
+        width: unset;
+    }
+    .footer h4{
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,59 @@
+
+/*  ------------>   Formulario de Contacto          ****/
+.contenedor-fondo{
+    background-image: url(../imagenes/vintage-3938883_1920.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;   
+}
+form{
+    width: 45rem;
+    margin: auto;
+    background: rgba(0,0,0,0.5);
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    margin-top: 10rem;
+    border-radius: 1rem;
+    
+}
+.separacion{
+    padding-bottom: 12rem;
+}
+form h2{
+    color: antiquewhite;
+    text-align: center;
+    margin: 0;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+label{
+    color: antiquewhite;
+}
+input,textarea, .button{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: .7rem;
+    box-sizing: border-box;
+    font-size: 1.7rem;
+    border: none;
+}
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 10rem;
+    max-height: 20rem;
+}
+.button{
+    background: #31384a;
+    color: antiquewhite;
+    padding: 2rem;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+
+@media (max-width:667px){
+    form{
+        width: 100%;
+    }
+}

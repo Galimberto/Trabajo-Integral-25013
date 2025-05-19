@@ -1,0 +1,46 @@
+/*  ------------>   Estilos Header          ****/
+
+.header{
+    background-color: burlywood;
+}
+.header h1{
+    font-size: 3rem;
+}
+.logo img, .logo-f img{
+    width: 4rem;
+}
+.nav ul{
+    list-style: none;
+}
+.nav ul li{
+    display: inline-block;
+}
+.nav ul li a{
+    text-decoration: none;
+    padding: 0 .5rem;
+    color: black;
+}
+.nav ul li a:hover{
+    background-color: bisque;
+}
+.titulo{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    top: 2.3rem;
+    left: 1rem;
+}
+
+@media(min-width:667px){
+    .header h1{
+        font-size: 3.8rem;
+    }
+    .nav li a{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .logo img, .logo-f img{
+        width: 5rem;
+    }
+}

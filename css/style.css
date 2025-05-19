@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./form.css');
+@import url('./productos.css');
+
+/***********************************************************************/
+/*  ------------>   Estilos Generales          ****/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 96%;
+    margin: 0 auto;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: rgb(179, 210, 245);
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+
+/***********************************************************************/
+/*  ------------>   Carrusel de Presentacion          ****/
+
+.fondo-carrusel{
+    background-color: rgb(80, 130, 224);
+}
+.slider-box{
+    margin: 3rem auto 0;
+    overflow: hidden;
+    
+}
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
+.slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.slider-box h2{   
+    font-size: 2.4rem;
+    text-shadow: .3rem .2rem .4rem rgba(0, 0, 0);
+}
+.slider-box .texto{
+    position: absolute;
+    /* text-align: center; */
+    color:cornsilk;
+    top: 2.5rem;
+    left: 5rem;
+}
+
+.slider-box img{
+    width: 100%;
+}
+
+@keyframes slide {
+    0%  {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/***********************************************************************/
+/*  ------------>   Siguiente de Presentacion          ****/
+.texto-inicio{
+    background-color: blue;  
+    color: cornsilk;
+}
+.texto-inicio h2{
+    text-shadow: .3rem .2rem .4rem rgba(0, 0, 0,0.4);
+    padding-top: 1rem;;
+}
+.texto-inicio h3{
+    text-shadow: .3rem .2rem .4rem rgba(0, 0, 0,0.4);
+}
+.contenedor-texto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.texto{
+    width: 40%;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+.contenedor-texto .texto p{
+    text-align: justify;
+}
+.contenedor-texto .texto h3{
+    text-align: left;
+}
+/***********************************************************************/
+/*  ------------>   Seccion Galeria de Imagenes          ****/
+
+.container-galeria{
+    margin: 0 auto;
+}
+
+.galeria {    
+    display: block;    
+}
+
+.item {
+    height: 200px; /* Altura de las imágenes */
+    margin-bottom: .5rem;
+}
+
+.item1 {
+    grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+.item2 {
+    grid-column: span 2; /* Ocupa 2 columnas */
+}
+
+/* Los demás (item3, item4, item5, item6) ocuparán 1 columna cada uno por defecto */
+
+.item1 {
+    background-image: url('../imagenes/MTB-bike.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.item2 {
+    background-image: url('../imagenes/ruta.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.item3 {
+    background-image: url('../imagenes/bmx.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.item4 {
+    background-image: url('../imagenes/bicycle-urbana.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.item5 {
+    background-image: url('../imagenes/child.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.item6 {
+    background-image: url('../imagenes/indumentaria.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.item {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; /* Controla la velocidad y suavidad de la animación */
+}
+
+.item:hover {
+    transform: scale(1.1); /* Escala la imagen un 10% más grande */
+}
+
+.item {
+    position: relative;
+    
+}
+.overlay {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    color:cornsilk;
+    font-size: 3rem;
+    text-shadow: .4rem .3rem .4rem rgba(0, 0, 0);
+    padding: 1rem;
+    border-radius: .5rem;
+} 
+
+/***********************************************************************/
+/********** Sector Media Query para Pantalla PC ********/
+
+@media(min-width:667px){ 
+    
+    /* estilos generales */
+    .container{
+        max-width: 120rem;
+    }
+
+    /* estilos Carrusel */
+    .slider-box{
+        width: 90rem;
+    }    
+    .slider-box h2{   
+        font-size: 4rem;
+    }
+    /* estilos galeria de fotos */
+    .galeria{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de igual ancho */
+        grid-template-rows: auto auto; /* Crea 2 filas (ajustadas automáticamente a su contenido) */
+        gap: 1rem; /* Espaciado entre elementos */
+    }
+    .texto-inicio h2{
+        font-size:3.2rem;
+    }
+    .texto-inicio .texto h3{
+        font-size: 2.8rem;
+    }
+    .texto-inicio .texto p{
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
