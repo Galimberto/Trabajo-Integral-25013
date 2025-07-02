@@ -5,7 +5,7 @@
     font-size: 3rem;
 }
 
-.contenedor-tarjetas {
+#contenedor-tarjetas {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 2rem; /* separación entre tarjetas */
@@ -38,9 +38,10 @@
     font-weight: bold;
     color: #27ae60;
     margin-bottom: 1rem;
+    font-size: 2rem;
 }
 
-button {
+.boton-producto {
     padding: 1rem 1.5rem;
     border: none;
     background-color: #2980b9;
@@ -49,11 +50,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.boton-producto:hover {
     background-color: #1f6391;
 }
 @media (max-width: 667px) /*and (min-width: 480px)*/ {
-    .contenedor-tarjetas {
+    #contenedor-tarjetas {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding: 1rem;
