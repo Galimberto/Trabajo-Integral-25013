@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     const renderizarProductos = ()=>{
         
-        //url= "https://dummyjson.com/products?limit=10";
         url= "https://dummyjson.com/products/category/sports-accessories";
 
         fetch(url)
@@ -27,9 +26,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     precioProducto.classList.add("precio");
                     precioProducto.textContent = `$${producto.price}`;
 
-                    //let descripcionProducto = document.createElement("p");
-                    //descripcionProducto.textContent = producto.description;
-
                     let btnAgregar = document.createElement("button")
                     btnAgregar.classList.add("boton-producto")
                     btnAgregar.textContent = "Agregar"
@@ -43,7 +39,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     tarjetaProducto.appendChild(imagenProducto);
                     tarjetaProducto.appendChild(tituloProducto);
                     tarjetaProducto.appendChild(precioProducto);
-                    //tarjetaProducto.appendChild(descripcionProducto);
                     tarjetaProducto.appendChild(btnAgregar);
 
                     contenedorProductos.appendChild(tarjetaProducto)
