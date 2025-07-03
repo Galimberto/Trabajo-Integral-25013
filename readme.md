@@ -22,3 +22,7 @@ El logo fue hecho en forma vectorial, es un hexagono al que se le incrusta un ci
 fractura de la tuerca.- Hay un logo en el Header y en el footer; y clickeando en el
 logo en cualquier página que aparezca se vuelve a Inicio.-
 
+####
+Se agrega la funcionalidad de e-commerce con javaScript consumiendo una API
+ (dummyjson.com).-
+
