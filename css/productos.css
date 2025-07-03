@@ -90,12 +90,18 @@ border-radius: 6px;
 }
 
 
+/****************************************************************************/
 #contenedor-tarjetas {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas */
     gap: 2rem; /* separación entre tarjetas */
     max-width: 120rem;
     margin: auto;
+}
+
+#contenedor-carrito{
+    background-color: #fff;
+    display: flex;
 }
 
 .tarjeta {
@@ -114,9 +120,10 @@ border-radius: 6px;
     border-radius: .4rem;
 }
 
-.descripcion {
+.titulo-producto {
     margin: 1rem 0;
     text-align: center;
+    font-size: 2rem;
 }
 
 .precio {
@@ -133,12 +140,19 @@ border-radius: 6px;
     color: white;
     border-radius: .5rem;
     cursor: pointer;
+    font-size: 1.7rem;
 }
 
 .boton-producto:hover {
-    background-color: #1f6391;
+    background-color: #194664;
 }
 @media (max-width: 667px) /*and (min-width: 480px)*/ {
+    /* #cotenedor-tarjetas-carrito{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    } */
+    
     #contenedor-tarjetas {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;

@@ -10,54 +10,55 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	const eliminarProducto = (indice) => {
 			carrito.splice(indice, 1);
 			localStorage.setItem("carrito", JSON.stringify(carrito));
-			actualizarAgregados();
-			pintarCarrito();
+			actualizarAgregados()
+			pintarCarrito()
 	};
+
 	
 
 	actualizarAgregados()
 
 	const pintarCarrito = ()=>{
-		carrito = JSON.parse(localStorage.getItem("carrito")) || []; // 🔁 REFRESCAR
-		const listadoCompra = document.getElementById("contenedor-carrito");
+			carrito = JSON.parse(localStorage.getItem("carrito")) || []; // 🔁 REFRESCAR
+			const listadoCompra = document.getElementById("contenedor-carrito");
 
-		listadoCompra.innerHTML = ''; // ✅ LIMPIA EL CONTENEDOR
+			listadoCompra.innerHTML = ''; // ✅ LIMPIA EL CONTENEDOR
 
-		if(carrito.length === 0){
-			listadoCompra.innerHTML= '<h3>Tu carrito esta vacio 😧</h3>'
-			
+			if(carrito.length === 0){
+					listadoCompra.innerHTML= '<h3>Tu carrito esta vacio 😧</h3>'
+					
 			}else{
-					carrito.forEach((producto,indice) => {
+					carrito.forEach((producto, indice) => {
 											
-						let tarjetaProducto = document.createElement("article");
-						tarjetaProducto.classList.add("tarjeta-producto");
+					let tarjetaProducto = document.createElement("article");
+					tarjetaProducto.classList.add("tarjeta-producto");
 									
-						let imagenProducto = document.createElement("img");
-						imagenProducto.src = producto.images[0];
-						imagenProducto.alt = producto.description;
+					let imagenProducto = document.createElement("img");
+					imagenProducto.src = producto.images[0];
+					imagenProducto.alt = producto.description;
 
-						let tituloProducto = document.createElement("h3");
-						tituloProducto.classList.add("titulo-producto");
-						tituloProducto.textContent = producto.title;
+					let tituloProducto = document.createElement("h3");
+					tituloProducto.classList.add("titulo-producto");
+					tituloProducto.textContent = producto.title;
 
-						let precioProducto = document.createElement("p");
-						precioProducto.textContent = `$${producto.price}`;
+					let precioProducto = document.createElement("p");
+					precioProducto.textContent = `$${producto.price}`;
 
-						let btnEliminar = document.createElement("button");
-						btnEliminar.textContent = "Eliminar";
+					let btnEliminar = document.createElement("button")
+					btnEliminar.textContent = "Eliminar"
 
-						btnEliminar.addEventListener("click", ()=>{
-						alert(`${producto.title} eliminado del carrito`);
-						eliminarProducto(indice);
-						actualizarAgregados();
+					btnEliminar.addEventListener("click", ()=>{
+					alert(`${producto.title} eliminado del carrito`);
+					eliminarProducto(indice);
+					actualizarAgregados();
 					})
 
-						tarjetaProducto.appendChild(imagenProducto);
-						tarjetaProducto.appendChild(tituloProducto);
-						tarjetaProducto.appendChild(precioProducto);
-						tarjetaProducto.appendChild(btnEliminar);
+					tarjetaProducto.appendChild(imagenProducto);
+					tarjetaProducto.appendChild(tituloProducto);
+					tarjetaProducto.appendChild(precioProducto);
+					tarjetaProducto.appendChild(btnEliminar);
 
-						listadoCompra.appendChild(tarjetaProducto);
+					listadoCompra.appendChild(tarjetaProducto)
 					})
 			}
 			renderizarResumenCarrito();
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 			let btnVaciar = document.createElement("button");
 			btnVaciar.textContent = "Vaciar carrito";
 
-			divAcciones.appendChild(btnVaciar);
+			divAcciones.appendChild(btnVaciar)
 
 			const vaciarCarrito = ()=>{
 					localStorage.removeItem("carrito");
@@ -126,4 +127,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 	pintarCarrito();
 
-});
+})
